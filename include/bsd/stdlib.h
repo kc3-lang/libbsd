@@ -85,6 +85,7 @@ void *reallocf(void *ptr, size_t size);
     (__GLIBC_PREREQ(2, 29) && !defined(_DEFAULT_SOURCE))
 void *reallocarray(void *ptr, size_t nmemb, size_t size);
 #endif
+int getpagesize (void);
 void *recallocarray(void *ptr, size_t oldnmemb, size_t nmemb, size_t size);
 void freezero(void *ptr, size_t size);
 

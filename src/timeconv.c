@@ -32,6 +32,7 @@
 
 #include <sys/cdefs.h>
 #include <sys/types.h>
+#include <inttypes.h>
 
 #include "local-link.h"
 

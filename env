@@ -1,0 +1,2 @@
+CPPFLAGS="-I/clang64/include -DNO_OLDNAMES"
+LDFLAGS="-L/clang64/lib -lshlwapi"

@@ -27,6 +27,8 @@
  */
 #define MUL_NO_OVERFLOW ((size_t)1 << (sizeof(size_t) * 4))
 
+int getpagesize (void) { return 4096; }
+
 void *
 recallocarray(void *ptr, size_t oldnmemb, size_t newnmemb, size_t size)
 {

@@ -335,7 +335,7 @@ AS_CASE([$host_os],
     abi_id_from_name=yes
     abi_inet_net_pton=no
     # On libmd.
-    abi_md5=no
+    abi_md5=yes
     abi_name_from_id=yes
     abi_nlist=no
     abi_pidfile=yes
@@ -358,8 +358,51 @@ AS_CASE([$host_os],
     abi_vis=yes
     abi_wcsl=yes
   ],
-  [mingw*], [
+  [mingw*|MINGW*], [
     is_windows=yes
+    api_time_macros=yes
+    abi_accmode=no
+    abi_arc4random=yes
+    abi_arc4random_stir=yes
+    abi_asprintf=yes
+    abi_bsd_getopt=yes
+    abi_closefrom=no
+    abi_err=yes
+    abi_errc=yes
+    abi_expand_number=yes
+    abi_explicit_bzero=yes
+    abi_fgetln=no
+    abi_flopen=no
+    abi_fmtcheck=yes
+    abi_fpurge=no
+    abi_freezero=yes
+    abi_funopen=no
+    abi_getbsize=no
+    abi_getpeereid=no
+    abi_humanize_number=yes
+    abi_id_from_name=no
+    abi_inet_net_pton=no
+    abi_md5=yes
+    abi_name_from_id=no
+    abi_nlist=no
+    abi_pidfile=no
+    abi_proctitle=no
+    abi_progname=yes
+    abi_readpassphrase=no
+    abi_reallocarray=yes
+    abi_reallocf=yes
+    abi_recallocarray=yes
+    abi_stringlist=yes
+    abi_sort=yes
+    abi_strl=yes
+    abi_strmode=no
+    abi_strnstr=yes
+    abi_strtonum=yes
+    abi_strtox=yes
+    abi_timeconv=yes
+    abi_transparent_libmd=yes
+    abi_vis=yes
+    abi_wcsl=yes
   ],
 )
 
