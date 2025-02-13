@@ -382,7 +382,7 @@ AS_CASE([$host_os],
     abi_humanize_number=yes
     abi_id_from_name=no
     abi_inet_net_pton=no
-    abi_md5=yes
+    abi_md5=no
     abi_name_from_id=no
     abi_nlist=no
     abi_pidfile=no

@@ -73,6 +73,7 @@ char *fgetln(FILE *fp, size_t *lenp)
  * as the code has to be modified anyway, we might just as well use the
  * correct declaration here.
  */
+/*
 FILE *funopen(const void *cookie,
               int (*readfn)(void *cookie, char *buf, int size),
               int (*writefn)(void *cookie, const char *buf, int size),
@@ -81,7 +82,7 @@ FILE *funopen(const void *cookie,
 
 #define fropen(cookie, fn) funopen(cookie, fn, NULL, NULL, NULL)
 #define fwopen(cookie, fn) funopen(cookie, NULL, fn, NULL, NULL)
-
+*/
 int fpurge(FILE *fp);
 __END_DECLS
 
