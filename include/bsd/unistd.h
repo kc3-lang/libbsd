@@ -59,7 +59,7 @@ int bsd_getopt(int argc, char * const argv[], const char *shortopts);
 #endif
 
 mode_t getmode(const void *set, mode_t mode);
-void *setmode(const char *mode_str);
+//void *setmode(const char *mode_str);
 
 #if !defined(__GLIBC__) || \
     !__GLIBC_PREREQ(2, 34) || \
@@ -74,7 +74,7 @@ void setproctitle_init(int argc, char *argv[], char *envp[]);
 void setproctitle(const char *fmt, ...)
 	__printflike(1, 2);
 
-int getpeereid(int s, uid_t *euid, gid_t *egid);
+//int getpeereid(int s, uid_t *euid, gid_t *egid);
 __END_DECLS
 
 #endif
