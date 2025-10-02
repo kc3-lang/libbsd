@@ -29,7 +29,7 @@
 if [ -f .dist-version ]; then
   # Get the version from the file distributed in the tarball.
   version=$(cat .dist-version)
-elif [ -d .git ]; then
+else
   # Ger the version from the git repository.
   version=$(git describe --abbrev=4 HEAD 2>/dev/null)
 
@@ -39,9 +39,6 @@ elif [ -d .git ]; then
   if [ -n "$dirty" ]; then
     version="$version-dirty"
   fi
-else
-  echo "error: cannot get project version." 1>&2
-  exit 1
 fi
 
 # Use printf to avoid the trailing new line that m4_esyscmd would not handle.
