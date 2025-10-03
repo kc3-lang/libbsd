@@ -87,6 +87,67 @@ abi_vis=unknown
 abi_wcsl=unknown
 
 AS_CASE([$host_os],
+  [*-android*], [
+    api_time_macros=no
+
+    abi_accmode=yes
+    # DROP: On glibc >= 2.36.
+    #abi_arc4random=no
+    abi_arc4random=yes
+    abi_arc4random_stir=yes
+    abi_asprintf=no
+    abi_bsd_getopt=yes
+    # DROP: On glibc >= 2.34.
+    #abi_closefrom=no
+    abi_closefrom=yes
+    abi_err=no
+    abi_errc=yes
+    abi_expand_number=yes
+    # DROP: On glibc >= 2.25.
+    #abi_explicit_bzero=no
+    abi_explicit_bzero=yes
+    abi_fgetln=yes
+    abi_flopen=yes
+    abi_fmtcheck=yes
+    abi_fpurge=no
+    abi_freezero=yes
+    abi_funopen=no
+    abi_getbsize=yes
+    abi_getpeereid=yes
+    abi_humanize_number=yes
+    abi_id_from_name=no
+    # DROP: On glibc.
+    #abi_inet_net_pton=no
+    abi_inet_net_pton=yes
+    # DROP: On libmd.
+    #abi_md5=no
+    abi_md5=yes
+    abi_name_from_id=no
+    abi_nlist=yes
+    abi_pidfile=yes
+    abi_proctitle=yes
+    abi_progname=no
+    abi_readpassphrase=yes
+    # DROP: On glibc >= 2.26.
+    #abi_reallocarray=no
+    abi_reallocarray=yes
+    abi_reallocf=yes
+    abi_recallocarray=yes
+    abi_stringlist=yes
+    abi_sort=yes
+    # DROP: On glibc >= 2.38.
+    #abi_strl=no
+    abi_strl=yes
+    abi_strmode=yes
+    abi_strnstr=yes
+    abi_strtonum=yes
+    abi_strtox=yes
+    abi_timeconv=yes
+    # DROP: On libmd.
+    abi_transparent_libmd=yes
+    abi_vis=yes
+    abi_wcsl=yes
+  ],
   [*-gnu* | gnu*], [
     api_time_macros=no
 

@@ -277,8 +277,12 @@
 #define Elf_Shdr	Elf32_Shdr
 #define Elf_Ehdr	Elf32_Ehdr
 #elif ELF_TARG_CLASS == ELFCLASS64
-#define ELF_ST_BIND	ELF64_ST_BIND
-#define ELF_ST_TYPE	ELF64_ST_TYPE
+#ifndef ELF_ST_BIND
+# define ELF_ST_BIND	ELF64_ST_BIND
+#endif
+#ifndef ELF_ST_TYPE
+# define ELF_ST_TYPE	ELF64_ST_TYPE
+#endif
 #define Elf_Word	Elf64_Word
 #define Elf_Sword	Elf64_Sword
 #define Elf_Sym		Elf64_Sym
