@@ -115,9 +115,15 @@ getprogname(void)
 		}
 
 		/* Remove any trailing extension, such as '.exe', to make the
-		 * behavior mach the non-Windows systems. */
-		wext = PathFindExtensionW(wname);
-		wext[0] = '\0';
+		 * behavior match the non-Windows systems. */
+		wext = wname + wcslen(wname);
+                while (wext > wname) {
+                        wext--;
+                        if (*wext == '.') {
+                                wext[0] = '\0';
+                                break;
+                        }
+                }
 
 		mbnamesiz = WideCharToMultiByte(CP_UTF8, 0, wname, -1, NULL,
 		                                0, NULL, NULL);
