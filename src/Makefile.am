@@ -380,7 +380,11 @@ install-exec-hook: $(TRANSPARENT_LIBMD_DEPENDS)
 if ABI_TRANSPARENT_LIBMD
 # The "GNU ld script" magic is required so that GNU ldconfig does not complain
 # about an unknown format file.
-	soname=`readlink $(DESTDIR)$(libdir)/libbsd.so`; \
+	if [ -L $(DESTDIR)$(libdir)/libbsd.so ]; then \
+		soname=`readlink $(DESTDIR)$(libdir)/libbsd.so`; \
+	else \
+		soname=libbsd.a; \
+	fi; \
 	$(RM) $(DESTDIR)$(libdir)/libbsd.so; \
 	(echo '/* GNU ld script'; \
 	 echo ' * The MD5 functions are provided by the libmd library. */'; \
