@@ -268,8 +268,12 @@
 #endif
 
 #if ELF_TARG_CLASS == ELFCLASS32
-#define ELF_ST_BIND	ELF32_ST_BIND
-#define ELF_ST_TYPE	ELF32_ST_TYPE
+#ifndef ELF_ST_BIND
+# define ELF_ST_BIND	ELF32_ST_BIND
+#endif
+#ifndef ELF_ST_TYPE
+# define ELF_ST_TYPE	ELF32_ST_TYPE
+#endif
 #define Elf_Word	Elf32_Word
 #define Elf_Sword	Elf32_Sword
 #define Elf_Sym		Elf32_Sym

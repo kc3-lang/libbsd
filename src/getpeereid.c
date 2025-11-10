@@ -34,6 +34,8 @@
 #include <errno.h>
 #include <unistd.h>
 
+int     getpeereid(int s, uid_t *euid, gid_t *egid);
+
 #if defined(SO_PEERCRED)
 /* Linux and OpenBSD */
 int

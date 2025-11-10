@@ -63,6 +63,8 @@ typedef struct bitcmd {
 #define	CMD2_OBITS	0x08
 #define	CMD2_UBITS	0x10
 
+void *  setmode(const char *p);
+
 static BITCMD	*addcmd(BITCMD *, mode_t, mode_t, mode_t, mode_t);
 static void	 compress_mode(BITCMD *);
 #ifdef SETMODE_DEBUG

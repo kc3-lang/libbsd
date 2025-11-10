@@ -41,6 +41,8 @@
 # define SPRINTF(x) ((size_t)sprintf x)
 #endif
 
+int     inet_net_pton(int af, const char *src, void *dst, size_t size);
+
 static int	inet_net_pton_ipv4(const char *src, unsigned char *dst, size_t size);
 
 /*
